@@ -29,7 +29,7 @@ function startSass(){
     .pipe($.concat('app.css'))
     .pipe($.plumber.stop())
     .pipe($.autoprefixer())
-    .pipe(gulp.dest(paths.root + '/styles'));
+    .pipe(gulp.dest(paths.root));
 }
 
 function startWatch(){
@@ -45,7 +45,7 @@ function startInject(){
 
   return target
     .pipe( $.inject( scripts,  {relative:true}) )
-    .pipe( $.inject( styles,  {relative:true}) )
+    // .pipe( $.inject( styles,  {relative:true}) )
     .pipe( gulp.dest( './' ) );
 }
 
