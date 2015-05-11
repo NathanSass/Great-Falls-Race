@@ -8,6 +8,7 @@ $breaker-height: 7em;
 $black: #111111;
 $lime: #01FF70;
 $gray: #AAAAAA;
+$navy: #001f3f;
 $dk-gray: #353535;
 $silver: #DDDDDD;
 $teal: #39CCCC;
@@ -19,5 +20,69 @@ $medium: 760px;
 
 html,
 body {
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  color: $dk-gray;
   height: 100%;
+  margin: 0;
 }
+
+header {
+  $image-height: 245px;
+  position: relative;
+  .hider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: $image-height;
+  }
+  .header-overlay {
+    background: linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1));
+    height: $image-height;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .header-image {
+    background-image: url('/app/images/robert_spout_m.jpg');
+    background-size: cover;
+    height: $image-height;
+    left: -153px;
+    position: absolute;
+    top: 0px;
+    width: 484px;
+  }
+
+  .header-title {
+    color: #001f3f;
+    font-size: 2.3em;
+    margin: 0 .2em;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-transform: uppercase;
+    top: 0;
+    width: 50%;
+    z-index: 2;
+  }
+}
+
+section {
+  text-align: center;
+}
+.register-text {
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+}
+
+.register-button {
+  color: $blue;
+  border: 4px solid $blue;
+  border-radius: 19px;
+  font-size: 2.5em;
+  padding: .1em .4em;
+  text-decoration: none;
+}
+
