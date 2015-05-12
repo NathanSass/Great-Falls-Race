@@ -28,12 +28,11 @@ header {
     background-image: url('/app/images/robert_spout_m.jpg');
     background-size: cover;
     height: 245px;
-    left: -153px;
+    left: -40vw;
     position: absolute;
     top: 0px;
-    width: 484px; }
+    width: 140vw; }
   header .header-title {
-    color: #001f3f;
     font-size: 2.3em;
     margin: 0 .2em;
     position: absolute;
@@ -45,7 +44,10 @@ header {
     z-index: 2; }
 
 section {
-  text-align: center; }
+  text-align: center;
+  margin: 0 1em 6em 1em; }
+  section:last-of-type {
+    margin-bottom: 1em; }
 
 .register-text {
   font-size: 1.25em;
@@ -57,4 +59,9 @@ section {
   border-radius: 19px;
   font-size: 2.5em;
   padding: .1em .4em;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color .25s;
+          transition: color .25s; }
+
+section.details .details-title {
+  font-size: 1.25em; }
