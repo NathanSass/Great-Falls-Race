@@ -7,7 +7,7 @@ var paths = {
   root: './app',
   html: './app/**/*.html',
   scripts: './app/scripts/**/*.js',
-  styles: './app/styles/**/*.css',
+  // styles: './app/styles/**/*.css',
   dist  : './dist'
 };
 
@@ -41,7 +41,7 @@ function startWatch(){
 function startInject(){
   var target  = gulp.src( paths.index );
   var scripts = gulp.src( paths.scripts, {read:false} );
-  var styles  = gulp.src( paths.styles, {read:false} );
+  // var styles  = gulp.src( paths.styles, {read:false} );
 
   return target
     .pipe( $.inject( scripts,  {relative:true}) )
