@@ -7,6 +7,7 @@ var paths = {
   root: './app',
   html: './app/**/*.html',
   scripts: './app/scripts/**/*.js',
+  img: './app/images/**/*.jpg',
   // styles: './app/styles/**/*.css',
   dist  : './dist'
 };
@@ -41,10 +42,12 @@ function startWatch(){
 function startInject(){
   var target  = gulp.src( paths.index );
   var scripts = gulp.src( paths.scripts, {read:false} );
+  var images = gulp.src( paths.img, {read:false} );
   // var styles  = gulp.src( paths.styles, {read:false} );
 
   return target
     .pipe( $.inject( scripts,  {relative:true}) )
+    .pipe( $.inject( images,  {relative:true}) )
     // .pipe( $.inject( styles,  {relative:true}) )
     .pipe( gulp.dest( './' ) );
 }
